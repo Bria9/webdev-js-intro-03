@@ -1,0 +1,72 @@
+
+1. Explain why a number data type added to a string data type returns a string.
+
+🍄  If a number datatype is added to a string javascript preforms
+    type coercion on the number and it is converted into a string.
+
+🍄  Name a scenario where using the == operator could cause a bug.
+   
+    when comparing a string datatype containing a number to
+    a number datatype the numbers are compared without considering
+    their data types and determined to be equal if their values match
+    which will cause the statement to be evaluated as true. 
+   --------------------------------------------------------------------     
+        Ex: let num1 = "2"
+            let num2 = 2
+            let result =  num1 == num2
+        console.log(result);  // output: true
+   --------------------------------------------------------------------
+
+🍄 Name the operator(s) that you find confusing and explain why.     
+    I find boolean operators to be the most confusing.
+    the || and && in particular because it's difficult to 
+    remember which values will be returned 1st in each situation
+    and why.
+
+   console.log(true &&"shroom"); // Output: shroom
+   console.log(true || "shroom") // Output: true
+   console.log(false || "shroom"); //Output: shroom **why?**
+   console.log(false && "shroom"); //Output: false  **why?**
+
+   when experimenting I also found it interesting that
+   true is represented by 1 and false by 0 
+-------------------------------------------------------------------------------   
+    Ex: console.log(true + true ) //Output 2 
+-------------------------------------------------------------------------------
+
+🍄Explain a situation where you would use the Modulus operator and why.
+
+   🪴 To determine if a number is even or odd:
+-----------------------------------------------------------------------------------
+    Ex: function isEven(num) {
+        return num % 2 === 0;
+        }
+
+        function isOdd(num) {
+        return num % 2 !== 0;
+        }
+
+        console.log(isEven(4)); // Output: true
+        console.log(isOdd(7)); // Output: true
+   
+     ➡︎  https://codedamn.com/news/javascript/modulo-operator
+ ----------------------------------------------------------------------------------   
+ 
+   🪴 For circular arrays: 
+ ----------------------------------------------------------------------------------  
+        const COLORS = ['red', 'yellow', 'blue'];
+
+        getColor({ timeElapsed: 0 }); // 'red'
+        getColor({ timeElapsed: 1 }); // 'yellow'
+        getColor({ timeElapsed: 2 }); // 'blue'
+        getColor({ timeElapsed: 3 }); // 'red'
+        getColor({ timeElapsed: 4 }); // 'yellow'
+        getColor({ timeElapsed: 5 }); // 'blue'
+        getColor({ timeElapsed: 6 }); // 'red'
+        getColor({ timeElapsed: 7 }); // 'yellow'
+        getColor({ timeElapsed: 8 }); // 'blue'
+
+     ➡︎  https://www.joshwcomeau.com/javascript/modulo-operator/
+-----------------------------------------------------------------------------------
+
+
